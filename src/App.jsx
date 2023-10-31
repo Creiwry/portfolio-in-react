@@ -12,7 +12,7 @@ function App() {
   return (
     <LocalizationContext.Provider value={{language: "EN"}}>
       <BrowserRouter>
-          <div className="relative flex flex-col max-w-[1400px] mx-auto w-full text-sm sm:text-base min-h-screen">
+          <div className="relative bg-gray-300 dark:bg-black flex flex-col max-w-[1400px] mx-auto w-full text-sm sm:text-base min-h-screen">
             <main className="flex flex-col flex-1 p-4">
               <Header />
               <Routes>
