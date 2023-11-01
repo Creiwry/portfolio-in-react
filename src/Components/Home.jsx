@@ -1,17 +1,19 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import LocalizationContext from '../LocalizationContext';
 
 const Home = () => {
   const [error, setError] = useState(null);
   const [ projects, setProjets] = useState([]);
+  const [locale, setLocale] = useContext(LocalizationContext);
 
   useEffect(() => {
     axios
-    .get("http://localhost:1337/api/projects")
+    .get(`http://localhost:1337/api/projects?locale=${locale}`)
     .then(({data}) => setProjets(data.data))
     .catch((error) => setError(error));
-  }, []);
+  }, [locale]);
 
   if (error) {
     return <div> An error occured: {error.message} </div>;

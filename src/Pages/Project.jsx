@@ -1,20 +1,22 @@
 import Showdown from 'showdown';
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import LocalizationContext from '../LocalizationContext';
 
 const Project = () => {
   const { projectSlug } = useParams();
   const [currentProject, setCurrentProject] = useState(undefined);
   const [error, setError] = useState(null);
   const [htmlContent, setHtmlContent] = useState("");
+  const [locale, setLocale] = useContext(LocalizationContext);
 
   useEffect(() => {
     axios
-    .get(`http://localhost:1337/api/projects?filters[Slug][$eq]=${projectSlug}`)
+    .get(`http://localhost:1337/api/projects?filters[Slug][$eq]=${projectSlug}&[locale][$eq]=${locale}`)
     .then(({data}) => setCurrentProject(data.data[0]))
     .catch((error)=> setError(error));
-  }, [projectSlug]);
+  }, [projectSlug, locale]);
 
   useEffect(() => {
     if (currentProject && currentProject.attributes.Content) {
