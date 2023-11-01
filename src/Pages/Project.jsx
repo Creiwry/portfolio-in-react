@@ -9,7 +9,7 @@ const Project = () => {
   const [currentProject, setCurrentProject] = useState(undefined);
   const [error, setError] = useState(null);
   const [htmlContent, setHtmlContent] = useState("");
-  const [locale, setLocale] = useContext(LocalizationContext);
+  const [locale] = useContext(LocalizationContext);
 
   useEffect(() => {
     axios

@@ -6,7 +6,7 @@ import LocalizationContext from '../LocalizationContext';
 const Home = () => {
   const [error, setError] = useState(null);
   const [ projects, setProjets] = useState([]);
-  const [locale, setLocale] = useContext(LocalizationContext);
+  const [locale] = useContext(LocalizationContext);
 
   useEffect(() => {
     axios
