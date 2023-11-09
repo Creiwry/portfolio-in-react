@@ -1,11 +1,4 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-
-window.addEventListener('DOMContentLoaded', (event) => {
-
-  particlesJS("particles-js", {
+const particlesOptions = {
 	"particles": {
 		"number": {
 			"value": 80,
@@ -114,11 +107,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		}
 	},
 	"retina_detect": true
-  });
-});
+}
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+export { particlesOptions }
