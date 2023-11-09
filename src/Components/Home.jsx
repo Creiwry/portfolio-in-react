@@ -41,7 +41,7 @@ const Home = () => {
 			</a>
 		</div>
 		<div className="grid place-items-center">
-			<img src='/src/assets/images/profile.png' alt="Profile" className="object-cover max-h-[70vh] max-w-[380px]" />
+			<img src='https://drive.google.com/uc?export=view&id=1kCPmxptKQcfRAoDpun8NDft55mC8KvXs' alt="Profile" className="object-cover max-h-[70vh] max-w-[380px]" />
 		</div>
 	</section>
 
