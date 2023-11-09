@@ -1,23 +1,20 @@
-import axios from 'axios'
 import { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import LocalizationContext from '../LocalizationContext';
+import { projectDataEnglish, projectDataFrench } from '../../public/data';
 
 const Home = () => {
-  const [error, setError] = useState(null);
-  const [ projects, setProjets] = useState([]);
+  const [ projects, setProjects] = useState([]);
   const [locale] = useContext(LocalizationContext);
 
   useEffect(() => {
-    axios
-    .get(`http://localhost:1337/api/projects?locale=${locale}`)
-    .then(({data}) => setProjets(data.data))
-    .catch((error) => setError(error));
+    console.log(locale)
+    if(locale === "fr") {
+      setProjects(projectDataFrench)
+    } else {
+      setProjects(projectDataEnglish)
+    }
   }, [locale]);
-
-  if (error) {
-    return <div> An error occured: {error.message} </div>;
-  }
 
   return (
   <>
@@ -49,18 +46,18 @@ const Home = () => {
 	</section>
 
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-      {projects.map(({ id, attributes }) => (
-        <div key={id}>
-          <Link to={`/project/${attributes.Slug}`} 	
+      {projects.map((project) => (
+        <div key={project.id}>
+          <Link to={`/project/${project.slug}`} 	
           className="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-rose-700 text-center group cursor-pointer hover:border-rose-400 duration-200"
          >
           <div
             className="dark:bg-black bg-gray-300 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
           >
-            <i className={attributes.Icon} />
+            <i className={project.icon} />
           </div>
-          <h3 className="font-medium text-xl sm:text-2xl md:text-3xl">{attributes.Title}</h3>
-          <p>{attributes.Description}</p>
+          <h3 className="font-medium text-xl sm:text-2xl md:text-3xl">{project.name}</h3>
+          <p>{project.description}</p>
           <div className="flex-1 flex justify-between gap-4 items-center">
             <div
               className="ml-auto rounded-full cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:h-0 after:right-full after:w-full after:h-full dark:after:bg-white after:bg-rose-500 after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"
@@ -72,7 +69,6 @@ const Home = () => {
         </div>
       ))}
     </div>
-
   </>
   )
 }

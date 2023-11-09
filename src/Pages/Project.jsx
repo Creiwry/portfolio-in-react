@@ -1,38 +1,39 @@
 import Showdown from 'showdown';
-import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect, useContext } from 'react'
 import LocalizationContext from '../LocalizationContext';
+import { projectDataEnglish, projectDataFrench } from '../../public/data';
 
 const Project = () => {
   const { projectSlug } = useParams();
   const [currentProject, setCurrentProject] = useState(undefined);
-  const [error, setError] = useState(null);
   const [htmlContent, setHtmlContent] = useState("");
   const [locale] = useContext(LocalizationContext);
+  const [ projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios
-    .get(`http://localhost:1337/api/projects?filters[Slug][$eq]=${projectSlug}&[locale][$eq]=${locale}`)
-    .then(({data}) => setCurrentProject(data.data[0]))
-    .catch((error)=> setError(error));
-  }, [projectSlug, locale]);
+    if(locale === "fr") {
+      setProjects(projectDataFrench)
+    } else {
+      setProjects(projectDataEnglish)
+    }
+  }, [setProjects, locale]);
 
   useEffect(() => {
-    if (currentProject && currentProject.attributes.Content) {
+    setCurrentProject(projects.filter((project) => project.slug === projectSlug)[0])
+  }, [locale, projects, projectSlug, currentProject])
+
+  useEffect(() => { 
+    if (currentProject && currentProject.content) {
       const converter = new Showdown.Converter({
         tables: true,
         tasklists: true,
         strikethrough: true,
       });
-      const html = converter.makeHtml(currentProject.attributes.Content);
+      const html = converter.makeHtml(currentProject.content);
       setHtmlContent(html);
     }
-  }, [currentProject]);
-
-  if (error) {
-    return <div> An error occured: {error.message}</div>;
-  }
+  }, [setHtmlContent, currentProject])
 
   return (
   <>
@@ -41,10 +42,9 @@ const Project = () => {
         <div
           className="dark:bg-black grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
         >
-          <i className={currentProject.attributes.Icon} />
+          <i className={currentProject.icon} />
         </div>
-        <h3 className="font-medium text-xl sm:text-2xl md:text-3xl">{currentProject.attributes.Title}</h3>
-        <p>{currentProject.attributes.ReleaseDate.split("-").join("/")}</p>
+        <h3 className="font-medium text-xl sm:text-2xl md:text-3xl">{currentProject.name}</h3>
 
         <div className="markdown text-start dark:text-white text-black" dangerouslySetInnerHTML={{ __html: htmlContent }} />
       </div>
