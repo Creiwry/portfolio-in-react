@@ -8,7 +8,7 @@ export default function LanguageSwitch() {
   const navigate = useNavigate();
 
   const switchLanguage = () => {
-    setLanguage(language === "en" ? "fr" : "en")
+    setLanguage(language === "EN" ? "FR" : "EN")
     navigate("/");
   };
 

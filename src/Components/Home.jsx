@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log(locale)
-    if(locale === "fr") {
+    if(locale === "FR") {
       setProjects(projectDataFrench)
     } else {
       setProjects(projectDataEnglish)

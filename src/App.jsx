@@ -8,17 +8,17 @@ import './App.css'
 import LocalizationContext from './LocalizationContext'
 
 function App() {
-  const [language, setLanguage] = useState("en")
+  const [language, setLanguage] = useState("EN")
 
   return (
     <LocalizationContext.Provider value={[language, setLanguage]}>
       <BrowserRouter>
-          <div className="relative flex flex-col mx-auto w-full text-sm sm:text-base min-h-screen">
-            <main className="flex flex-col flex-1 p-4 2xl:px-32 ">
-              <Header />
+          <div className="relative flex flex-col mx-auto w-full max-w-none items-stretch text-sm sm:text-base min-h-screen">
+          <Header />
+            <main className="flex flex-col flex-1 p-4 2xl:px-32">
               <Routes>
                 <Route path="/project/:projectSlug" element={<Project />} />
-                  <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home />} />
               </Routes>
             </main>
             <Footer />

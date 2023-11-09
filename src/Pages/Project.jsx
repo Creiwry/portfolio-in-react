@@ -12,7 +12,7 @@ const Project = () => {
   const [ projects, setProjects] = useState([]);
 
   useEffect(() => {
-    if(locale === "fr") {
+    if(locale === "FR") {
       setProjects(projectDataFrench)
     } else {
       setProjects(projectDataEnglish)
@@ -38,15 +38,17 @@ const Project = () => {
   return (
   <>
       {currentProject ?
-      <div className="z-[2] bg-black p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-rose-700 text-center group">
-        <div
-          className="bg-black grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
-        >
-          <i className={currentProject.icon} />
-        </div>
-        <h3 className="font-medium text-xl sm:text-2xl md:text-3xl">{currentProject.name}</h3>
+      <div className="flex flex-col items-center">
+        <div className="relative max-w-[860px] z-[2] bg-black p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-rose-700 text-center group">
+          <div
+            className="bg-black grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
+          >
+            <i className={currentProject.icon} />
+          </div>
+          <h3 className="font-medium text-xl sm:text-2xl md:text-3xl">{currentProject.name}</h3>
 
-        <div className="markdown text-start text-white" dangerouslySetInnerHTML={{ __html: htmlContent }} />
+          <div className="markdown text-start text-white" dangerouslySetInnerHTML={{ __html: htmlContent }} />
+        </div>
       </div>
       : <div> Project not found </div>}
   </>

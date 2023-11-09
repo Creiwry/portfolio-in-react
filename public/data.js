@@ -29,7 +29,7 @@ const projectDataFrench =
       "slug": "course-gate-fr",
       "name": "Course Gate",
       "content": "Content in french",
-      "description": "description in french",
+      "description": "CourseGate est une plateforme d'apprentissage créée avec Ruby on Rails, Stripe, PostgreSQL et Tailwind ! Stripe est utilisé pour la gestion des transactions.",
       "icon": "fa-solid fa-book"
     },
     {
@@ -38,7 +38,7 @@ const projectDataFrench =
       "slug": "local-news-fr",
       "name": "Local News",
       "content": "Content in french",
-      "description": "description in french",
+      "description": "LocalNews est un réseau social créé avec Ruby on Rails, PostgreSQL et React ! La géolocalisation et Turbo sont utilisés pour des mises à jour en direct des potins dans votre région.",
       "icon": "fa-solid fa-comment"
     }
   ]
