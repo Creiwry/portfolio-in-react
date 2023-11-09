@@ -19,13 +19,14 @@
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <link rel="stylesheet" href="particles.css" type="text/css" media="all">
+    <title>Jay's Portfolio</title>
   </head>
-  <body class="dark:text-white text-black relative">
-    <div id="root" style="display: contents" class="relative z-[2]"></div>
-		<div class="absolute min-h-screen top-0 left-0 w-full z-[-2] opacity-70">
-			<div class="absolute inset-0 min-h-screen" id="particles-js"></div>
-		</div>
+  <body class="text-white relative min-h-screen">
+    <div class="body-particles relative flex flex-center">
+      <div id="root" style="display: contents" class="relative z-[2]"></div>
+    </div>
+		<div id="particles-js"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

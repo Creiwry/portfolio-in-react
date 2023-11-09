@@ -18,14 +18,14 @@ const Home = () => {
 
   return (
   <>
-	<section id="introPage" className="bg-none dark:text-white relative z-[2] grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
+	<section id="introPage" className="bg-none text-white relative z-[2] grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 2xl:px-24">
 		<div className="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
 			<h2 className="font-semibold text-4xl sm:text-5xl md:text-6xl">
-				Hi! I am <span className="poppins dark:text-rose-400 text-rose-800">Jay</span> Gardos <br />Back End
-				<span className="poppins dark:text-rose-400 text-rose-800"> developer</span>
+				Hi! I am <span className="poppins text-rose-400">Jay</span> Gardos <br />Back End
+				<span className="poppins text-rose-400"> developer</span>
 			</h2>
 			<p className="text-base sm:text-large md:text-xl">
-				My <span className="dark:text-rose-400 text-rose-800">favourite tech</span> includes Ruby on Rails Django PostgreSQL
+				My <span className="text-rose-400">favourite tech</span> includes Ruby on Rails Django PostgreSQL
 				& React!
 			</p>
 			<a
@@ -52,7 +52,7 @@ const Home = () => {
           className="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-rose-700 text-center group cursor-pointer hover:border-rose-400 duration-200"
          >
           <div
-            className="dark:bg-black bg-gray-300 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
+            className="bg-black grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
           >
             <i className={project.icon} />
           </div>

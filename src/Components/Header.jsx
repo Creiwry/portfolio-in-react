@@ -1,12 +1,10 @@
 import LanguageSwitch from './LanguageSwitch'
-import Switcher from './Switcher'
 import { Link } from "react-router-dom"
 
 export default function Header(){
   return (
     <header
       className='sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid py-6 bg-transparent border-transparent'>
-      <Switcher />
       <h1 className="font-medium"><b className="font-bold poppins ml-1">Jay</b> Gardos</h1>
       <div className="sm:flex ml-auto pr-4 items-center gap-4 hidden">
         <LanguageSwitch />

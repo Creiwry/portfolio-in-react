@@ -13,8 +13,8 @@ function App() {
   return (
     <LocalizationContext.Provider value={[language, setLanguage]}>
       <BrowserRouter>
-          <div className="relative bg-gray-300 dark:bg-black flex flex-col max-w-[1400px] mx-auto w-full text-sm sm:text-base min-h-screen">
-            <main className="flex flex-col flex-1 p-4">
+          <div className="relative flex flex-col mx-auto w-full text-sm sm:text-base min-h-screen">
+            <main className="flex flex-col flex-1 p-4 2xl:px-32 ">
               <Header />
               <Routes>
                 <Route path="/project/:projectSlug" element={<Project />} />
