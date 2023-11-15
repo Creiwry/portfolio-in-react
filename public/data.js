@@ -6,7 +6,7 @@ const projectDataEnglish =
       "slug": "course-gate-en",
       "name": "Course Gate",
       "content": "Course Gate is a web application that allows students to enroll in courses and instructors to manage course offerings. <br> <br> <h2> Features </h2> \n- Students can browse available courses and enroll in them. \n- Instructors can create, edit, and delete courses. \n- Authentication system for students and instructors. \n- Enrollment validation to prevent duplicate enrollments. \n- User-friendly interface for easy navigation. <br> <br>  <h2>Technologies Used: </h2> <br> \n- Ruby on Rails: A web development framework used for building the application. \n- PostgreSQL: The database management system for storing application data. \n- Tailwind: A front-end framework for responsive and attractive user interface design. \n- Stimulus: a Rails-like integration of javascript code into the frontend. \n### [Github](https://github.com/Creiwry/CourseGate#course-gate)",
-      "description": "CourseGate is a learning platform created with Ruby on Rails Stripe PostgreSQL & Tailwind! Stripe is used for transaction handling",
+      "description": "CourseGate is a learning platform created with Ruby on Rails Stripe PostgreSQL & Tailwind!",
       "icon": "fa-solid fa-book"
     },
     {
