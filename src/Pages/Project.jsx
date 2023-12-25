@@ -2,7 +2,7 @@ import Showdown from 'showdown';
 import { useParams } from 'react-router-dom'
 import { useState, useEffect, useContext } from 'react'
 import LocalizationContext from '../LocalizationContext';
-import { projectDataEnglish, projectDataFrench } from '../../public/data';
+import { projectDataEnglish, projectDataFrench } from '/data';
 
 const Project = () => {
   const { projectSlug } = useParams();
