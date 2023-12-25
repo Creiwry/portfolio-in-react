@@ -88,9 +88,13 @@ const Home = () => {
           <p>{project.description}</p>
           <div className="flex-1 flex justify-between gap-4 items-center">
             <div
-              className="ml-auto rounded-full cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:h-0 after:right-full after:w-full after:h-full dark:after:bg-white after:bg-rose-500 after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"
+              className="ml-auto rounded-full cursor-pointer duration-200 relative after:absolute after:top-0 after:right-full after:w-full after:h-full dark:after:bg-white after:bg-rose-800 after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"
             >
-              <p className="relative z-4 px-2">Accéder <i className="mx-1 fa-solid fa-arrow-right" /></p>
+                  { locale === "FR" ?
+                    <p className="relative z-4 px-2">Accéder <i className="mx-1 fa-solid fa-arrow-right" /></p>
+                  :
+                    <p className="relative z-4 px-2">Go to <i className="mx-1 fa-solid fa-arrow-right" /></p>
+                }
             </div>
           </div>
         </Link>
