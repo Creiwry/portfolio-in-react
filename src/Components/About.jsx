@@ -17,7 +17,7 @@ const About = () => {
 				Un peu <span className="poppins text-rose-400">à propos</span> de moi
 			</h3>
 		</div>
-		<p className="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">I am . . .</p>
+		<p className="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">Je suis . . .</p>
 		<div className="flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
       <div className="flex gap-6 am:gap-8">
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
