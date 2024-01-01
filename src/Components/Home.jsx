@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import LocalizationContext from '../LocalizationContext';
 import { projectDataEnglish, projectDataFrench } from '/data';
+import About from './About';
 
 const Home = () => {
   const [ projects, setProjects] = useState([]);
@@ -41,7 +42,7 @@ const Home = () => {
         </a>
       </div>
       <div className="grid place-items-center">
-        <img src='https://drive.google.com/uc?export=view&id=1kCPmxptKQcfRAoDpun8NDft55mC8KvXs' alt="Profile" className="object-cover max-h-[70vh] max-w-[780px]" />
+        <img src='https://drive.google.com/uc?export=view&id=15Y1Dh4MPqbU2lwJKtfjVYRuRkWJ7gyk-' alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
       </div>
     </section>
           :
@@ -68,39 +69,80 @@ const Home = () => {
         </a>
       </div>
       <div className="grid place-items-center">
-        <img src='https://drive.google.com/uc?export=view&id=1kCPmxptKQcfRAoDpun8NDft55mC8KvXs' alt="Profile" className="object-cover max-h-[70vh] max-w-[780px]" />
+        <img src='https://drive.google.com/uc?export=view&id=15Y1Dh4MPqbU2lwJKtfjVYRuRkWJ7gyk-' alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
       </div>
     </section>
         }
 
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-      {projects.map((project) => (
-        <div key={project.id}>
-          <Link to={`/project/${project.slug}`} 	
-          className="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-rose-700 text-center group cursor-pointer hover:border-rose-400 duration-200"
-         >
-          <div
-            className="bg-black grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
-          >
-            <i className={project.icon} />
-          </div>
-          <h3 className="font-medium text-xl sm:text-2xl md:text-3xl">{project.name}</h3>
-          <p>{project.description}</p>
-          <div className="flex-1 flex justify-between gap-4 items-center">
+        <About />
+    <section id="projects" className="py-20 lg:py-32 flex flex-col gap-24">
+          { locale === "FR" ? 
+
+		<div
+			className="flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700"
+		>
+      <div className="flex flex-col gap-2 text-center">
+        <h6 className="text-lg sm:text-xl md:text-2xl">Quelques-unes de mes entreprises créatives.</h6>
+        <h3 className="font-semibold text-3xl sm:text-4xl md:text-5xl">
+          Curieux de <span className="poppins text-rose-400">voir</span> mon travail ?
+        </h3>
+      </div>
+      </div>
+        :
+		<div
+			className="flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700"
+		>
+      <div className="flex flex-col gap-2 text-center">
+        <h6 className="text-lg sm:text-xl md:text-2xl">A few of my creative endeavours.</h6>
+        <h3 className="font-semibold text-3xl sm:text-4xl md:text-5xl">
+          Curious to <span className="poppins text-rose-400">see</span> my work?
+        </h3>
+      </div>
+      </div>
+        }
+      <a
+        href="https://github.com/Creiwry"
+        rel="noreferrer"
+        target="_blank"
+        className="group mx-auto bg-stone-900 neon-rose px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-rose-700 duration-200"
+      >
+          { locale === "FR" ? 
+            <p className="text-xl">Visiter mon GitHub</p>
+          :
+            <p className="text-xl">Visit my Github</p>
+        }
+        <i className="fa-brands fa-github text-2xl group-hover:text-rose-500 group-hover:animate-pulse" />
+      </a>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+        {projects.map((project) => (
+          <div key={project.id}>
+            <Link to={`/project/${project.slug}`} 	
+            className="h-full p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-rose-700 text-center group cursor-pointer hover:border-rose-400 duration-200"
+           >
             <div
-              className="ml-auto rounded-full cursor-pointer duration-200 relative after:absolute after:top-0 after:right-full after:w-full after:h-full dark:after:bg-white after:bg-rose-800 after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"
+              className="bg-black grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
             >
-                  { locale === "FR" ?
-                    <p className="relative z-4 px-2">Accéder <i className="mx-1 fa-solid fa-arrow-right" /></p>
-                  :
-                    <p className="relative z-4 px-2">Go to <i className="mx-1 fa-solid fa-arrow-right" /></p>
-                }
+              <i className={project.icon} />
             </div>
+            <h3 className="font-medium text-xl sm:text-2xl md:text-3xl">{project.name}</h3>
+            <p>{project.description}</p>
+            <div className="flex-1 flex justify-between gap-4 items-center">
+              <div
+                className="ml-auto rounded-full cursor-pointer duration-200 relative after:absolute after:top-0 after:right-full after:w-full after:h-full dark:after:bg-white after:bg-rose-800 after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"
+              >
+                    { locale === "FR" ?
+                      <p className="relative z-4 px-2">Accéder <i className="mx-1 fa-solid fa-arrow-right" /></p>
+                    :
+                      <p className="relative z-4 px-2">Go to <i className="mx-1 fa-solid fa-arrow-right" /></p>
+                  }
+              </div>
+            </div>
+          </Link>
           </div>
-        </Link>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+
+    </section>
   </>
   )
 }
