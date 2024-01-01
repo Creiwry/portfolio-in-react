@@ -38,7 +38,7 @@ const Project = () => {
   return (
   <>
       {currentProject ?
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mt-10">
         <div className="relative max-w-[860px] z-[2] bg-black p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-rose-700 text-center group">
           <div
             className="bg-black grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"

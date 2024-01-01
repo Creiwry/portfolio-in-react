@@ -5,11 +5,10 @@ import { projectDataEnglish, projectDataFrench } from '/data';
 import About from './About';
 
 const Home = () => {
-  const [ projects, setProjects] = useState([]);
+  const [ projects, setProjects ] = useState([]);
   const [locale] = useContext(LocalizationContext);
 
   useEffect(() => {
-    console.log(locale)
     if(locale === "FR") {
       setProjects(projectDataFrench)
     } else {
@@ -30,14 +29,11 @@ const Home = () => {
           Mes <span className="text-rose-400">technologies préférées</span> incluent Ruby on Rails, Django, PostgreSQL et React !
         </p>
         <a
-          className="violetShadow cursor-pointer mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950"
+          className="cursor-pointer mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-rose-800 hover:text-white duration-300"
           href="https://www.linkedin.com/in/jaygardos/"
           rel='noreferrer'
           target="_blank"
         >
-          <div
-            className="absolute top-0 right-full w-full h-full bg-rose-400 opacity-40 group-hover:translate-x-full z-0 duration-200"
-          />
           <h4 className="relative z-9">Reste en contact <i className="mx-1 fa-solid fa-arrow-right" /></h4>
         </a>
       </div>
@@ -57,14 +53,11 @@ const Home = () => {
           & React!
         </p>
         <a
-          className="violetShadow cursor-pointer mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950"
+          className="cursor-pointer mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-rose-800 hover:text-white duration-300"
           href="https://www.linkedin.com/in/jaygardos/"
           rel='noreferrer'
           target="_blank"
         >
-          <div
-            className="absolute top-0 right-full w-full h-full bg-rose-400 opacity-40 group-hover:translate-x-full z-0 duration-200"
-          />
           <h4 className="relative z-9">Get in touch <i className="mx-1 fa-solid fa-arrow-right" /></h4>
         </a>
       </div>
@@ -104,25 +97,25 @@ const Home = () => {
         href="https://github.com/Creiwry"
         rel="noreferrer"
         target="_blank"
-        className="group mx-auto bg-stone-900 neon-rose px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-rose-700 duration-200"
+        className="group mx-auto delay-100 bg-stone-900 neon-rose px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-rose-700 duration-200"
       >
           { locale === "FR" ? 
             <p className="text-xl">Visiter mon GitHub</p>
           :
             <p className="text-xl">Visit my Github</p>
         }
-        <i className="fa-brands fa-github text-2xl group-hover:text-rose-500 group-hover:animate-pulse" />
+        <i className="fa-brands fa-github text-2xl group-hover:text-rose-500 group-hover:animate-pulse delay-100 group-hover:scale-125 duration-500" />
       </a>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
         {projects.map((project) => (
           <div key={project.id}>
             <Link to={`/project/${project.slug}`} 	
-            className="h-full p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-rose-700 text-center group cursor-pointer hover:border-rose-400 duration-200"
+            className="h-full p-4 sm:p-6 group md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-rose-700 text-center group cursor-pointer hover:border-rose-400 duration-300"
            >
             <div
               className="bg-black grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
             >
-              <i className={project.icon} />
+              <i className={project.icon + " group-hover:text-rose-700 duration-300 group-hover:animate-bounce"} />
             </div>
             <h3 className="font-medium text-xl sm:text-2xl md:text-3xl">{project.name}</h3>
             <p>{project.description}</p>

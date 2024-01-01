@@ -19,8 +19,8 @@ const About = () => {
 		</div>
 		<p className="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">Je suis . . .</p>
 		<div className="flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
-      <div className="flex gap-6 am:gap-8">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
+      <div className="flex gap-6 am:gap-8 group">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           1
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">
@@ -38,9 +38,9 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex flex-col md:px-20 gap-20 w-full mx-auto max-2-[800px]">
+		<div className="flex group flex-col md:px-20 gap-20 w-full mx-auto max-2-[800px]">
       <div className="flex gap-6 am:gap-8">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           2
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">
@@ -56,9 +56,9 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
+		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
       <div className="flex gap-6 am:gap-8">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500 group-hover:text-rose-800 duration-500">
           3
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">
@@ -74,9 +74,9 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
+		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
       <div className="flex gap-6 am:gap-8">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           4
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">
@@ -110,9 +110,9 @@ const About = () => {
 			</h3>
 		</div>
 		<p className="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">I am . . .</p>
-		<div className="flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
+		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
       <div className="flex gap-6 am:gap-8">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           1
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">
@@ -130,9 +130,9 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
+		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
       <div className="flex gap-6 am:gap-8">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           2
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">
@@ -148,9 +148,9 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
+		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
       <div className="flex gap-6 am:gap-8">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           3
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">
@@ -168,9 +168,9 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
+		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
       <div className="flex gap-6 am:gap-8">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           4
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">

@@ -10,7 +10,7 @@ export default function LanguageSwitch() {
 
   return (
   <div>
-    <button onClick={switchLanguage} className="text-xl text-white border rounded-lg border-rose-800 p-2 hover:border-rose-400">{language || "no language set"}</button>
+    <button onClick={switchLanguage} className="text-xl delay-50 duration-200 text-white border rounded-lg border-rose-800 p-2 hover:border-rose-400">{language || "no language set"}</button>
   </div>
   )
 }
