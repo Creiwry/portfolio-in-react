@@ -3,10 +3,27 @@ import { Link } from 'react-router-dom'
 import LocalizationContext from '../LocalizationContext';
 import { projectDataEnglish, projectDataFrench } from '/data';
 import About from './About';
+import { useRef } from 'react';
+import { useIsVisible } from '../assets/useIsVisible';
 
 const Home = () => {
   const [ projects, setProjects ] = useState([]);
   const [locale] = useContext(LocalizationContext);
+
+  const ref4 = useRef();
+  const isVisible4 = useIsVisible(ref4);
+
+  const ref5 = useRef();
+  const isVisible5 = useIsVisible(ref5);
+
+  const ref1 = useRef();
+  const isVisible1 = useIsVisible(ref1);
+
+  const ref2 = useRef();
+  const isVisible2 = useIsVisible(ref2);
+
+  const ref3 = useRef();
+  const isVisible3 = useIsVisible(ref3);
 
   useEffect(() => {
     if(locale === "FR") {
@@ -20,7 +37,7 @@ const Home = () => {
   <>
       { locale === "FR" ?
     <section id="introPage" className="bg-none text-white relative z-[2] grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 2xl:px-24">
-      <div className="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
+      <div ref={ref4} className={`transition-opacity ease-in duration-[1200ms] ${isVisible4 ? "opacity-100" : "opacity-0"} flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10`}>
         <h2 className="font-semibold text-4xl sm:text-5xl md:text-6xl">
           Salut ! Je suis <span className="poppins text-rose-400">Jay</span> Gardos <br />
           <span className="poppins text-rose-400">développeuse</span> Back End
@@ -37,13 +54,13 @@ const Home = () => {
           <h4 className="relative z-9">Reste en contact <i className="mx-1 fa-solid fa-arrow-right" /></h4>
         </a>
       </div>
-      <div className="grid place-items-center">
+      <div ref={ref5} className={`transition-opacity ease-in duration-[1200ms] ${isVisible5 ? "opacity-100" : "opacity-0"} grid place-items-center`}>
         <img src='https://drive.google.com/uc?export=view&id=15Y1Dh4MPqbU2lwJKtfjVYRuRkWJ7gyk-' alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
       </div>
     </section>
           :
     <section id="introPage" className="bg-none text-white relative z-[2] grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 2xl:px-24">
-      <div className="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
+      <div ref={ref4} className={`transition-opacity ease-in duration-[1200ms] ${isVisible4 ? "opacity-100" : "opacity-0"} flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10`}>
         <h2 className="font-semibold text-4xl sm:text-5xl md:text-6xl">
           Hi! I am <span className="poppins text-rose-400">Jay</span> Gardos <br />Back End
           <span className="poppins text-rose-400"> developer</span>
@@ -61,7 +78,7 @@ const Home = () => {
           <h4 className="relative z-9">Get in touch <i className="mx-1 fa-solid fa-arrow-right" /></h4>
         </a>
       </div>
-      <div className="grid place-items-center">
+      <div ref={ref5} className={`transition-opacity ease-in duration-[1200ms] ${isVisible5 ? "opacity-100" : "opacity-0"} grid place-items-center`}>
         <img src='https://drive.google.com/uc?export=view&id=15Y1Dh4MPqbU2lwJKtfjVYRuRkWJ7gyk-' alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
       </div>
     </section>
@@ -72,7 +89,8 @@ const Home = () => {
           { locale === "FR" ? 
 
 		<div
-			className="flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700"
+        ref={ref1}
+			className={`transition-opacity ease-in duration-[1200ms] ${isVisible1 ? "opacity-100" : "opacity-0"} flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700`}
 		>
       <div className="flex flex-col gap-2 text-center">
         <h6 className="text-lg sm:text-xl md:text-2xl">Quelques-unes de mes entreprises créatives.</h6>
@@ -83,7 +101,8 @@ const Home = () => {
       </div>
         :
 		<div
-			className="flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700"
+        ref={ref1}
+			className={`transition-opacity ease-in duration-[1200ms] ${isVisible1 ? "opacity-100" : "opacity-0"} flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700`}
 		>
       <div className="flex flex-col gap-2 text-center">
         <h6 className="text-lg sm:text-xl md:text-2xl">A few of my creative endeavours.</h6>
@@ -94,10 +113,11 @@ const Home = () => {
       </div>
         }
       <a
+          ref={ref2}
         href="https://github.com/Creiwry"
         rel="noreferrer"
         target="_blank"
-        className="group mx-auto delay-100 bg-stone-900 neon-rose px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-rose-700 duration-200"
+        className={`transition-opacity ease-in duration-[1200ms] ${isVisible2 ? "opacity-100" : "opacity-0"} group mx-auto delay-100 bg-stone-900 neon-rose px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-rose-700 duration-200`}
       >
           { locale === "FR" ? 
             <p className="text-xl">Visiter mon GitHub</p>
@@ -106,7 +126,7 @@ const Home = () => {
         }
         <i className="fa-brands fa-github text-2xl group-hover:text-rose-500 group-hover:animate-pulse delay-100 group-hover:scale-125 duration-500" />
       </a>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+      <div ref={ref3} className={`transition-opacity ease-in duration-[1200ms] ${isVisible3 ? "opacity-100" : "opacity-0"} grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10`}>
         {projects.map((project) => (
           <div key={project.id}>
             <Link to={`/project/${project.slug}`} 	
@@ -134,7 +154,6 @@ const Home = () => {
           </div>
         ))}
       </div>
-
     </section>
   </>
   )

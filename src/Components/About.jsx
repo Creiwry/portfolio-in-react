@@ -1,8 +1,27 @@
 import { useContext } from "react";
 import LocalizationContext from "../LocalizationContext";
+import { useRef } from "react";
+import { useIsVisible } from "../assets/useIsVisible";
 
 const About = () => {
   const [locale] = useContext(LocalizationContext);
+  const ref1 = useRef();
+  const isVisible1 = useIsVisible(ref1);
+
+  const ref2 = useRef();
+  const isVisible2 = useIsVisible(ref2);
+
+  const ref3 = useRef();
+  const isVisible3 = useIsVisible(ref3);
+
+  const ref4 = useRef();
+  const isVisible4 = useIsVisible(ref4);
+
+  const ref5 = useRef();
+  const isVisible5 = useIsVisible(ref5);
+
+  const ref6 = useRef();
+  const isVisible6 = useIsVisible(ref6);
 
   return(locale === "FR" ?
 	<section
@@ -10,17 +29,18 @@ const About = () => {
 		className="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
 	>
 		<div
-			className="flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700"
+        ref={ref1}
+			className={`transform transition-opacity ease-in duration-[1200ms]  ${isVisible1 ? "opacity-100" : "opacity-0"} flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700`}
 		>
 			<h6 className="text-lg sm:text-xl md:text-2xl">Envie d&apos;en savoir plus ?</h6>
 			<h3 className="font-semibold text-3xl sm:text-4xl md:text-5xl">
 				Un peu <span className="poppins text-rose-400">à propos</span> de moi
 			</h3>
 		</div>
-		<p className="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">Je suis . . .</p>
-		<div className="flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
+		<p ref={ref2} className={`transition-opacity ease-in duration-[1200ms] ${isVisible2 ? "opacity-100" : "opacity-0"} mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl`}>Je suis . . .</p>
+		<div ref={ref3} className={`transition-opacity ease-in duration-[1200ms] ${isVisible3 ? "opacity-100" : "opacity-0"} flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]`}>
       <div className="flex gap-6 am:gap-8 group">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold duration-500 group-hover:text-rose-800">
           1
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">
@@ -38,9 +58,9 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex group flex-col md:px-20 gap-20 w-full mx-auto max-2-[800px]">
-      <div className="flex gap-6 am:gap-8">
-        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
+		<div ref={ref4} className={`transition-opacity ease-in duration-[1200ms] ${isVisible4 ? "opacity-100" : "opacity-0"} flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]`}>
+      <div className="flex gap-6 am:gap-8 group">
+        <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold duration-500 group-hover:text-rose-800">
           2
         </p>
         <div className="flex flex-col gap-6 sm:gap-8">
@@ -56,8 +76,8 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
-      <div className="flex gap-6 am:gap-8">
+		<div ref={ref5} className={`transition-opacity ease-in duration-[1200ms] ${isVisible5 ? "opacity-100" : "opacity-0"} flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]`}>
+      <div className="flex gap-6 am:gap-8 group">
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500 group-hover:text-rose-800 duration-500">
           3
         </p>
@@ -74,8 +94,8 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
-      <div className="flex gap-6 am:gap-8">
+		<div ref={ref6} className={`transition-opacity ease-in duration-[1200ms] ${isVisible6 ? "opacity-100" : "opacity-0"} flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]`}>
+      <div className="flex gap-6 am:gap-8 group">
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           4
         </p>
@@ -102,16 +122,17 @@ const About = () => {
 		className="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
 	>
 		<div
-			className="flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700"
+        ref={ref1}
+			className={`transition-opacity ease-in duration-[1200ms] ${isVisible1 ? "opacity-100" : "opacity-0"} flex flex-col py-4 gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-rose-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-rose-700`}
 		>
 			<h6 className="text-lg sm:text-xl md:text-2xl">Want to know more?</h6>
 			<h3 className="font-semibold text-3xl sm:text-4xl md:text-5xl">
 				A bit <span className="poppins text-rose-400">about</span> me.
 			</h3>
 		</div>
-		<p className="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">I am . . .</p>
-		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
-      <div className="flex gap-6 am:gap-8">
+		<p ref={ref2} className={`transition-opacity ease-in duration-[1200ms] ${isVisible2 ? "opacity-100" : "opacity-0"} mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl`}>I am . . .</p>
+		<div ref={ref3} className={`transition-opacity ease-in duration-[1200ms] ${isVisible3 ? "opacity-100" : "opacity-0"} flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]`}>
+      <div className="flex gap-6 am:gap-8 group">
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           1
         </p>
@@ -130,8 +151,8 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
-      <div className="flex gap-6 am:gap-8">
+		<div ref={ref4} className={`transition-opacity ease-in duration-[1200ms] ${isVisible4 ? "opacity-100" : "opacity-0"} flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]`}>
+      <div className="flex gap-6 am:gap-8 group">
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           2
         </p>
@@ -148,8 +169,8 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
-      <div className="flex gap-6 am:gap-8">
+		<div ref={ref5} className={`transition-opacity ease-in duration-[1200ms] ${isVisible5 ? "opacity-100" : "opacity-0"} flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]`}>
+      <div className="flex gap-6 am:gap-8 group">
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           3
         </p>
@@ -168,8 +189,8 @@ const About = () => {
         </div>
       </div>
 		</div>
-		<div className="flex group md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]">
-      <div className="flex gap-6 am:gap-8">
+		<div ref={ref6} className={`transition-opacity ease-in duration-[1200ms] ${isVisible6 ? "opacity-100" : "opacity-0"} flex md:px-20 flex-col gap-20 w-full mx-auto max-2-[800px]`}>
+      <div className="flex gap-6 am:gap-8 group">
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           4
         </p>
