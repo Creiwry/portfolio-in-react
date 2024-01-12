@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from 'react'
+import profileImage from '../assets/images/profile.png';
 import { Link } from 'react-router-dom'
 import LocalizationContext from '../LocalizationContext';
 import { projectDataEnglish, projectDataFrench } from '/data';
@@ -55,7 +56,7 @@ const Home = () => {
         </a>
       </div>
       <div ref={ref5} className={`transition-opacity ease-in duration-[1200ms] ${isVisible5 ? "opacity-100" : "opacity-0"} grid place-items-center`}>
-        <img src='https://drive.google.com/uc?export=view&id=15Y1Dh4MPqbU2lwJKtfjVYRuRkWJ7gyk-' alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
+        <img src={profileImage} alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
       </div>
     </section>
           :
@@ -79,7 +80,7 @@ const Home = () => {
         </a>
       </div>
       <div ref={ref5} className={`transition-opacity ease-in duration-[1200ms] ${isVisible5 ? "opacity-100" : "opacity-0"} grid place-items-center`}>
-        <img src='https://drive.google.com/uc?export=view&id=15Y1Dh4MPqbU2lwJKtfjVYRuRkWJ7gyk-' alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
+        <img src={profileImage} alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
       </div>
     </section>
         }
