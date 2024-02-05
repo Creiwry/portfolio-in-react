@@ -70,3 +70,6 @@ h3,
 	object-position: center;
 	object-fit: cover;
 }
+body {
+  background-color: #000;
+}
