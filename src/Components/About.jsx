@@ -43,7 +43,7 @@ const About = () => {
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold duration-500 group-hover:text-rose-800">
           1
         </p>
-        <div className="flex flex-col gap-6 sm:gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8 mr-3 md:mr-0">
           <h3 className="text-2xl sm:text-3xl md:text-5xl">
             Pensée à l'échelle globale
           </h3>
@@ -63,7 +63,7 @@ const About = () => {
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold duration-500 group-hover:text-rose-800">
           2
         </p>
-        <div className="flex flex-col gap-6 sm:gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8 mr-3 md:mr-0">
           <h3 className="text-2xl sm:text-3xl md:text-5xl">
             À jour avec les technologies actuelles
           </h3>
@@ -81,7 +81,7 @@ const About = () => {
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500 group-hover:text-rose-800 duration-500">
           3
         </p>
-        <div className="flex flex-col gap-6 sm:gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8 mr-3 md:mr-0">
           <h3 className="text-2xl sm:text-3xl md:text-5xl">
             Consciente des conventions
           </h3>
@@ -99,7 +99,7 @@ const About = () => {
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           4
         </p>
-        <div className="flex flex-col gap-6 sm:gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8 mr-3 md:mr-0">
           <h3 className="text-2xl sm:text-3xl md:text-5xl">
             Une adepte des bons tests
           </h3>
@@ -136,7 +136,7 @@ const About = () => {
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           1
         </p>
-        <div className="flex flex-col gap-6 sm:gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8 mr-3 md:mr-0">
           <h3 className="text-2xl sm:text-3xl md:text-5xl">
             Big picture thinker
           </h3>
@@ -156,7 +156,7 @@ const About = () => {
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           2
         </p>
-        <div className="flex flex-col gap-6 sm:gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8 mr-3 md:mr-0">
           <h3 className="text-2xl sm:text-3xl md:text-5xl">
             Up to date with current tech
           </h3>
@@ -174,7 +174,7 @@ const About = () => {
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           3
         </p>
-        <div className="flex flex-col gap-6 sm:gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8 mr-3 md:mr-0">
           <h3 className="text-2xl sm:text-3xl md:text-5xl">
             Mindful of conventions
           </h3>
@@ -194,7 +194,7 @@ const About = () => {
         <p className="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold group-hover:text-rose-800 duration-500">
           4
         </p>
-        <div className="flex flex-col gap-6 sm:gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8 mr-3 md:mr-0">
           <h3 className="text-2xl sm:text-3xl md:text-5xl">
               A fan of good testing
           </h3>

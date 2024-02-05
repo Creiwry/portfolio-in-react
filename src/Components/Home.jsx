@@ -37,9 +37,9 @@ const Home = () => {
   return (
   <>
       { locale === "FR" ?
-    <section id="introPage" className="bg-none text-white relative z-[2] grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 2xl:px-24">
+    <section id="introPage" className="bg-none text-white relative z-[2] grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 2xl:px-24 lg:mx-10">
       <div ref={ref4} className={`transition-opacity ease-in duration-[1200ms] ${isVisible4 ? "opacity-100" : "opacity-0"} flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10`}>
-        <h2 className="font-semibold text-4xl sm:text-5xl md:text-6xl">
+        <h2 className="font-semibold text-3xl sm:text-5xl md:text-6xl">
           Salut ! Je suis <span className="poppins text-rose-400">Jay</span> Gardos <br />
           <span className="poppins text-rose-400">développeuse</span> Back End
         </h2>
@@ -56,13 +56,13 @@ const Home = () => {
         </a>
       </div>
       <div ref={ref5} className={`transition-opacity ease-in duration-[1200ms] ${isVisible5 ? "opacity-100" : "opacity-0"} grid place-items-center`}>
-        <img src={profileImage} alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
+        <img src={profileImage} alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[40vw] max-w-[80vw]" />
       </div>
     </section>
           :
-    <section id="introPage" className="bg-none text-white relative z-[2] grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 2xl:px-24">
+    <section id="introPage" className="bg-none text-white relative z-[2] grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 2xl:px-24 lg:mx-10">
       <div ref={ref4} className={`transition-opacity ease-in duration-[1200ms] ${isVisible4 ? "opacity-100" : "opacity-0"} flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10`}>
-        <h2 className="font-semibold text-4xl sm:text-5xl md:text-6xl">
+        <h2 className="font-semibold text-3xl sm:text-5xl md:text-6xl">
           Hi! I am <span className="poppins text-rose-400">Jay</span> Gardos <br />Back End
           <span className="poppins text-rose-400"> developer</span>
         </h2>
@@ -80,7 +80,7 @@ const Home = () => {
         </a>
       </div>
       <div ref={ref5} className={`transition-opacity ease-in duration-[1200ms] ${isVisible5 ? "opacity-100" : "opacity-0"} grid place-items-center`}>
-        <img src={profileImage} alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[50vw] max-w-[90vw]" />
+        <img src={profileImage} alt="Profile" className="object-cover max-h-[50vh] lg:max-w-[40vw] max-w-[80vw]" />
       </div>
     </section>
         }

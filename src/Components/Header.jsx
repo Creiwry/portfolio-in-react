@@ -7,7 +7,7 @@ export default function Header(){
   const [locale] = useContext(LocalizationContext);
   return (
     <header
-      className='sticky bg-stone-900 neon-rose z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid py-6 border-transparent'>
+      className='sticky bg-stone-900 neon-rose z-[10] top-0 duration-200 px-6 flex mx-0 items-center justify-between border border-solid py-6 border-transparent'>
       <LanguageSwitch />
       <h1 className="font-medium flex">
         <div className='hover:text-rose-500 hover:animate-spin duration-700 mr-1'>
